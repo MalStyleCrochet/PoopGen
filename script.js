@@ -573,8 +573,8 @@ function playRandomFart() {
 function handleConfigChange() {
     changeCounter++;
     
-    // Play sound on every 5th change (1/5 probability)
-    if (changeCounter % 5 === 0) {
+    // every change has 25% chance to fart
+    if (Math.floor(Math.random() * 4) === 0) {
         playRandomFart();
     }
 }
