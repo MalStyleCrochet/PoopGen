@@ -1,5 +1,5 @@
 /* =============================================================================
-   Crochet Poop Factory - Main JavaScript
+   Crochet Poop Generator - Main JavaScript
    Handles SVG generation, UI interactions, and audio playback
    ============================================================================= */
 
