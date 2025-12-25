@@ -101,6 +101,7 @@ const config = {
  * Used to determine when to play a fart sound (every 5th change).
  */
 let changeCounter = 0;
+let changeCountFromLastFart = 0;
 
 // =============================================================================
 // SVG Generation Functions
@@ -573,9 +574,13 @@ function playRandomFart() {
 function handleConfigChange() {
     changeCounter++;
     
-    // every change has 25% chance to fart
-    if (Math.floor(Math.random() * 4) === 0) {
+    // every change has 40% chance to fart
+    if (Math.random() <= 0.34 || changeCountFromLastFart === 4) {
         playRandomFart();
+        changeCountFromLastFart = 0;
+    }
+    else {
+        changeCountFromLastFart++;
     }
 }
 
